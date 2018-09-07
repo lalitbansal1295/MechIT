@@ -34,7 +34,7 @@ public class HomeActivity extends AppCompatActivity {
                     SQLiteDatabase data = openOrCreateDatabase("ipec", MODE_PRIVATE, null);
                     data.execSQL("create table if not exists student(name varchar, email varchar, password varchar)");
                     String s3 = "select * from student where name='" + s1 + "' and password = '" + s2 +"'";
-                    Cursor cursor = data.rawQuery(s3.null);
+                    Cursor cursor = data.rawQuery(s3,null);
                     if(cursor.getCount() > 0) {
                         Intent i = new Intent(HomeActivity.this, Options.class);
                         startActivity(i);
