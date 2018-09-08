@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.bansal.all_in_one_ipec">
-
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,8 +16,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".HomeActivity" />
+        <activity android:name=".Options" />
         <activity android:name=".SignUp" />
-        <activity android:name=".Options"></activity>
+        <activity android:name=".CanteenOrders" />
+        <activity android:name=".EventNotification" />
+        <activity android:name=".LostAndFound" />
+        <activity android:name=".Cleanliness" />
+        <activity android:name=".ComplainPreview"></activity>
     </application>
 
 </manifest>

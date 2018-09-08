@@ -11,9 +11,10 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class HomeActivity extends AppCompatActivity {
-    EditText e1,e2;
     Button b1,b2;
+    EditText e1,e2;
     String s1,s2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,32 +25,32 @@ public class HomeActivity extends AppCompatActivity {
         b2 = (Button)findViewById(R.id.button2);
         b1.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 s1 = e1.getText().toString();
                 s2 = e2.getText().toString();
-                if (s1.equals("") || s2.equals("")){
-                    Toast.makeText(HomeActivity.this, "PLEASE FILL ALL", Toast.LENGTH_SHORT).show();
-            }
+                if(s1.equals("") || s2.equals("")){
+                    Toast.makeText(HomeActivity.this, "Please Fill All", Toast.LENGTH_SHORT).show();
+                }
                 else {
-                    SQLiteDatabase data = openOrCreateDatabase("ipec", MODE_PRIVATE, null);
-                    data.execSQL("create table if not exists student(name varchar, email varchar, password varchar)");
-                    String s3 = "select * from student where name='" + s1 + "' and password = '" + s2 +"'";
+                    SQLiteDatabase data = openOrCreateDatabase("ipec", MODE_PRIVATE,null);
+                    data.execSQL("create table if not exists student(name varchar,email varchar,password varchar)");
+                    String s3 = "select * from student where name = '" + s1 +"' and password = '" + s2 +"'";
                     Cursor cursor = data.rawQuery(s3,null);
-                    if(cursor.getCount() > 0) {
+                    if(cursor.getCount() > 0){
                         Intent i = new Intent(HomeActivity.this, Options.class);
                         startActivity(i);
                         finish();
                     }
-                    else{
+                    else {
                         Toast.makeText(HomeActivity.this, "Password is incorrect", Toast.LENGTH_SHORT).show();
                     }
                 }
-        }
+            }
         });
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent i = new Intent(HomeActivity.this, SignUp.class);
+            public void onClick(View v) {
+                Intent i = new Intent(HomeActivity.this, Options.class);
                 startActivity(i);
                 finish();
             }

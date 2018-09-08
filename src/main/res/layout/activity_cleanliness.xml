@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.bansal.all_in_one_ipec.Cleanliness"
+    android:background="@drawable/background5">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText6"
+        android:layout_alignParentStart="true"
+        android:text="Describe your problem"
+        android:layout_above="@+id/button10"
+        android:textSize="20dp"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/editText7" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit your problem"
+        android:id="@+id/button10"
+        android:textSize="20dp"
+        android:layout_above="@+id/button11"
+        android:layout_alignEnd="@+id/editText6"
+        android:background="@color/bright_foreground_disabled_material_light"
+        android:allowUndo="false"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show previous complain"
+        android:id="@+id/button11"
+        android:textSize="20dp"
+        android:textColor="#ffffff"
+        android:background="@color/bright_foreground_disabled_material_light"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/button10" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText7"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:text="Enter your username"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:id="@+id/button12"
+        android:textColor="#ffffff"
+        android:background="@color/bright_foreground_disabled_material_light"
+        android:layout_below="@+id/editText6"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/button11" />
+</RelativeLayout>
