@@ -1,8 +1,8 @@
 package com.example.bansal.all_in_one_ipec;
 
+import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -28,13 +28,13 @@ public class CanteenOrders extends AppCompatActivity {
         webView2 = (WebView) findViewById(R.id.webView);
         webView2.getSettings().setJavaScriptEnabled(true);
         webView2.getSettings().setAppCacheEnabled(true);
-        webView2.loadUrl("https://www.zomato.com./ncr");
+        webView2.loadUrl("https://www.zomato.com.");
         swipe2.setRefreshing(true);
         webView2.setWebViewClient(new WebViewClient(){
 
             public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
 
-                webView2.loadUrl("https://www.zomato.com./ncr");
+                webView2.loadUrl("https://www.zomato.com.");
 
             }
 

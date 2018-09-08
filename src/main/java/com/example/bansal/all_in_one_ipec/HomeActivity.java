@@ -11,7 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class HomeActivity extends AppCompatActivity {
-    Button b1,b2;
+    Button b1,b2,b14;
     EditText e1,e2;
     String s1,s2;
 
@@ -23,6 +23,15 @@ public class HomeActivity extends AppCompatActivity {
         e2 = (EditText)findViewById(R.id.editText2);
         b1 = (Button)findViewById(R.id.button);
         b2 = (Button)findViewById(R.id.button2);
+        b14 = (Button)findViewById(R.id.button14);
+        b14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(HomeActivity.this, About.class);
+                startActivity(i);
+                finish();
+            }
+        });
         b1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -50,7 +59,7 @@ public class HomeActivity extends AppCompatActivity {
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(HomeActivity.this, Options.class);
+                Intent i = new Intent(HomeActivity.this, SignUp.class);
                 startActivity(i);
                 finish();
             }

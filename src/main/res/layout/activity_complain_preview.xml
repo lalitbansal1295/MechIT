@@ -10,10 +10,13 @@
     tools:context="com.example.bansal.all_in_one_ipec.ComplainPreview"
     android:background="@drawable/background1">
 
-    <ListView
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/listView"
+        android:text="Contact to HOD of respective department"
+        android:id="@+id/textView8"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textSize="60dp"
+        android:textColor="#632b2b" />
 </RelativeLayout>

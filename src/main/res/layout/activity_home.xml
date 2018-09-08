@@ -50,7 +50,8 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:textSize="30dp"
-        android:text="LOGIN" />
+        android:text="LOGIN"
+        android:background="@color/bright_foreground_disabled_material_dark" />
 
     <Button
         android:layout_width="wrap_content"
@@ -60,5 +61,16 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="50dp"
-        android:textSize="30dp" />
+        android:textSize="30dp"
+        android:background="@color/bright_foreground_disabled_material_dark" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About"
+        android:id="@+id/button14"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/editText2"
+        android:textSize="20dp"
+        android:background="@color/bright_foreground_disabled_material_dark" />
 </RelativeLayout>
